@@ -1,0 +1,42 @@
+package nacrosolu;
+
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Birthday_party implements Comparable<Birthday_party> {
+	 ArrayList<String> list = new ArrayList<>();
+	public void Birtdayentries(String name)
+	{
+		
+		 list.add(name);
+			System.out.println(list);
+			
+
+		 
+	
+	}
+public void CheckEmpty() {
+ListIterator<String> itr = list.listIterator();
+while (itr.hasNext()) {
+				  itr.set(itr.next().replaceAll("\\s", ""));
+				  System.out.print(list);
+}	  
+	}
+  
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  package Party;
+
+import java.util.ArrayList;
+
+import nacrosolu.Birthday_party;
+
+public class Main {
+	public static void main(String[] args) {
+		Birthday_party entries = new Birthday_party();
+		entries.Birtdayentries("Ra  m"+"sha  m");
+		entries.Birtdayentries("sham");
+		entries.CheckEmpty();
+	}
+
+}
